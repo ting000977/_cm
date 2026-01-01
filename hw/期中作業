@@ -1,0 +1,40 @@
+# Matrix Operations in Python
+
+def input_matrix(name):
+    print(f"請輸入矩陣 {name} (2x2)：")
+    matrix = []
+    for i in range(2):
+        row = list(map(int, input().split()))
+        matrix.append(row)
+    return matrix
+
+def add_matrix(A, B):
+    return [[A[i][j] + B[i][j] for j in range(2)] for i in range(2)]
+
+def multiply_matrix(A, B):
+    result = [[0, 0], [0, 0]]
+    for i in range(2):
+        for j in range(2):
+            for k in range(2):
+                result[i][j] += A[i][k] * B[k][j]
+    return result
+
+def transpose_matrix(A):
+    return [[A[j][i] for j in range(2)] for i in range(2)]
+
+
+# 主程式
+A = input_matrix("A")
+B = input_matrix("B")
+
+print("\nA + B =")
+for row in add_matrix(A, B):
+    print(row)
+
+print("\nA × B =")
+for row in multiply_matrix(A, B):
+    print(row)
+
+print("\nA 的轉置矩陣 =")
+for row in transpose_matrix(A):
+    print(row)
