@@ -1,14 +1,13 @@
 # 習題 1 : 請用程式驗證微積分基本定理
 
-[習題](https://github.com/wengziting00/_cm/blob/main/homework/hw1/hw1.py)
-[說明](https://github.com/wengziting00/_cm/blob/main/homework/hw1/README.md)
+[習題]https://github.com/ting000977/_cm/blob/main/hw/%E7%BF%92%E9%A1%8C%E4%B8%80
 AI資料遺失
 
 設定一個非常小的數 ℎ=0.00001 h=0.00001，用來模擬微分與積分的極小變化量。接著利用「差分法」定義 df(f, x)，以 (f(x+h)−f(x))/h 來近似函數在 x 處的導數；再用「黎曼和」的概念定義 integral(f, a, b)， 從 a 開始以步長 h 累加每一小段的面積 f(x)⋅h，近似計算定積分。之後在 theorem1(f, x) 中，先把函數 f 從 0 積分到 x，再對這個積分結果做微分，理論上應該回到原函數f(x)， 這正是在數值方式下驗證微積分基本定理。程式最後以 𝑓(𝑥)=x^3為例，計算在 x=2 處的導數近似值與從 0 到 2 的定積分近似值，並檢查「先積分再微分」的結果是否與原函數在該點的值足夠接近（誤差小於 0.01）
 
 # 習題 2 : 請寫程式求解二次多項式的根
-[習題二](https://github.com/wengziting00/_cm/blob/main/homework/hw2/hw2.py)
-[說明](https://github.com/wengziting00/_cm/blob/main/homework/hw2/README.md)
+https://github.com/ting000977/_cm/blob/main/hw/%E7%BF%92%E9%A1%8C%E4%BA%8C
+説明二
 AI資料遺失
 
 首先匯入 cmath，因為當判別式 𝑏^2−4𝑎𝑐b2為負數時，平方根會是複數，cmath 可以正確處理這種情況。接著在 root2(a, b, c) 函式中，先計算判別式的平方根 discriminant = cmath.sqrt(b**2 - 4ac)，再依照二次方程式公式 2a分之−𝑏±根號b^2−4𝑎𝑐分別求出兩個解 root1 和 root2。為了確認計算是否正確，程式把這兩個解再代回原本的函數 𝑓(𝑥)=𝑎𝑥2+𝑏𝑥+𝑐 得到 f1 和 f2，理論上結果應該非常接近 0。最後使用 cmath.isclose 檢查代入後的結果是否在容許誤差範圍內，如果不接近 0 就印出警告訊息，提醒可能有數值誤差或計算問題，確認無誤後再把兩個根回傳
