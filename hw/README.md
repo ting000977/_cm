@@ -7,28 +7,28 @@ AI資料遺失
 
 # 習題 2 : 請寫程式求解二次多項式的根
 https://github.com/ting000977/_cm/blob/main/hw/%E7%BF%92%E9%A1%8C%E4%BA%8C
-説明二
+https://github.com/ChristFarrell/_cm/blob/main/Homework/HomeworkNotes.md#homework-2
 AI資料遺失
 
 首先匯入 cmath，因為當判別式 𝑏^2−4𝑎𝑐b2為負數時，平方根會是複數，cmath 可以正確處理這種情況。接著在 root2(a, b, c) 函式中，先計算判別式的平方根 discriminant = cmath.sqrt(b**2 - 4ac)，再依照二次方程式公式 2a分之−𝑏±根號b^2−4𝑎𝑐分別求出兩個解 root1 和 root2。為了確認計算是否正確，程式把這兩個解再代回原本的函數 𝑓(𝑥)=𝑎𝑥2+𝑏𝑥+𝑐 得到 f1 和 f2，理論上結果應該非常接近 0。最後使用 cmath.isclose 檢查代入後的結果是否在容許誤差範圍內，如果不接近 0 就印出警告訊息，提醒可能有數值誤差或計算問題，確認無誤後再把兩個根回傳
 
 # 習題 3 : 請寫程式求解三次多項式的根 (加分題）
-[習題三](https://github.com/wengziting00/_cm/blob/main/homework/hw3/hw3.py)
-[說明](https://github.com/wengziting00/_cm/blob/main/homework/hw3/README.md)
+https://github.com/ting000977/_cm/blob/main/hw/%E7%BF%92%E9%A1%8C%E4%B8%89
+[AI](https://chatgpt.com/share/692e83cd-3a6c-800b-9fb2-24fea7d55629)
 AI資料遺失
 
 先檢查 a!=0，再把方程式除以 (a) 使首項係數變成 1，接著透過代換 x=t−3分之b​ 將原式化為沒有二次項的簡化形式 t^3+pt+q=0，並由此計算 (p)、(q) 與判別式 Δ。之後套用 Cardano 公式，計算 u^3=-2分之q+根號Δ 與 u^3=-2分之q-根號Δ，再用複數立方根與立方根單位根 𝜔 ω 組合出三個 t 的解，最後將結果回代 x=t-3分之b，得到原三次方程式的三個解（包含實根與複根）
 
 # 習題 4 : （思考）請寫一個函數 root(c) 求出 n 次多項式的根 （ n>=5 的時候，數學上證明沒有公式 -- 伽羅瓦定理）
-[習題4](https://github.com/wengziting00/_cm/blob/main/homework/hw4/hw4.py)
-[說明](https://github.com/wengziting00/_cm/blob/main/homework/hw4/README.md)
+https://github.com/ting000977/_cm/blob/main/hw/%E7%BF%92%E9%A1%8C%E5%9B%9B
+https://github.com/ChristFarrell/_cm/blob/main/Homework/HomeworkNotes.md#homework-4
 [AI](https://gemini.google.com/app/5295fd37c17d5673)
 
 函式 solve_polynomial_roots(c) 接收一個串列 c，其中第 (i) 個元素代表 (x^i) 的係數，程式會先從最高次開始移除尾端多餘的 0，避免因為最高次係數為 0 而誤判多項式次數；如果移除後發現整個串列為空，表示多項式是 (f(x)=0)，此時任何 (x) 都是解，程式會印出警告並回傳空陣列。接著將係數順序反轉，因為 numpy.roots 需要由最高次到最低次的係數排列，然後印出原始係數與轉換後的係數供檢查。最後呼叫 np.roots 計算多項式的所有根（包含實根與複根），並將結果回傳。
 
 # 第二週習題：有限體
-[習題5](https://github.com/wengziting00/_cm/blob/main/homework/week2/week2.py)
-[說明](https://github.com/wengziting00/_cm/blob/main/homework/week2/README.md)
+https://github.com/ting000977/_cm/blob/main/hw/%E7%BF%92%E9%A1%8C%EF%BC%9A%E6%9C%89%E9%99%90%E9%AB%94
+https://chatgpt.com/share/6948d3d9-21b4-8005-912e-efe1390cda53
 [AI](https://gemini.google.com/app/513b61f539777e4d?hl=zh-TW)
 
 ## 有限體觀念簡介
@@ -87,8 +87,7 @@ AI資料遺失
 分配律驗證：3 * (4 + 2) = 3 = 3 * 4 + 3 * 2 → ✅
 
 # 第三週習題：幾何學：（點，線，圓）世界的建構
-[week3](https://github.com/wengziting00/_cm/blob/main/homework/week3/homework3.py)
-[說明](https://github.com/wengziting00/_cm/tree/main/homework/week3)
+https://github.com/ting000977/_cm/blob/main/hw/%E7%AC%AC%E4%B8%89%E9%80%B1%E7%BF%92%E9%A1%8C%EF%BC%9A%E5%B9%BE%E4%BD%95%E5%AD%B8%EF%BC%9A%EF%BC%88%E9%BB%9E%EF%BC%8C%E7%B7%9A%EF%BC%8C%E5%9C%93%EF%BC%89%E4%B8%96%E7%95%8C%E7%9A%84%E5%BB%BA%E6%A7%8B
 [AI](https://gemini.google.com/app/7fb82a480baf3cb0?hl=zh-TW)
 
 ## Geometry Toolkit (Python) - 二維幾何計算工具庫
@@ -178,11 +177,10 @@ AI資料遺失
 * **說明：** 這裡 `theta` 為旋轉角度（弧度）。
 
 # 第八週習題：機率統計 - 檢定背後的數學原理
-[AI](https://gemini.google.com/app/05721409f016f69e?hl=zh-TW)
+(https://github.com/ting000977/_cm/blob/main/hw/%E7%AC%AC%E5%85%AB%E9%80%B1%E7%BF%92%E9%A1%8C%EF%BC%9A%E6%A9%9F%E7%8E%87%E7%B5%B1%E8%A8%88%20-%20%E6%AA%A2%E5%AE%9A%E8%83%8C%E5%BE%8C%E7%9A%84%E6%95%B8%E5%AD%B8%E5%8E%9F%E7%90%86)
 
 # 第九周習題：資訊理論
-[HW8](https://github.com/wengziting00/_cm/blob/main/homework/week9/homework9.py)
-[說明](https://github.com/wengziting00/_cm/tree/main/homework/week9)
+https://github.com/ting000977/_cm/blob/main/hw/%E7%AC%AC%E4%B9%9D%E5%91%A8%E7%BF%92%E9%A1%8C%EF%BC%9A%E8%B3%87%E8%A8%8A%E7%90%86%E8%AB%96
 [AI](https://gemini.google.com/app/32e30bc46b73129c?hl=zh-TW)
 
 ## 1. 連續丟 10000 次正面的機率
@@ -273,8 +271,7 @@ B（頻寬）SNR（訊噪比）
 這是特定模型的「可達最高傳輸速度」。
 
 # 第十周習題：線性代數
-[HW9](https://github.com/wengziting00/_cm/blob/main/homework/week10/homework10.py)
-[說明](https://github.com/wengziting00/_cm/blob/main/homework/week10/README.md)
+https://github.com/ting000977/_cm/blob/main/hw/%E7%AC%AC%E5%8D%81%E5%91%A8%E7%BF%92%E9%A1%8C%EF%BC%9A%E7%B7%9A%E6%80%A7%E4%BB%A3%E6%95%B8
 [AI](https://gemini.google.com/app/5a46793b4b1d78a6?hl=zh-TW)
 
 ## 1. 什麼是「線性」？為何叫「代數」？
@@ -482,8 +479,7 @@ $X = U \Sigma V^T$
 
 # 第11周習題：請寫出傅立葉正轉換和逆轉換的函數（不要用套件）
 
-[習題10](https://github.com/wengziting00/_cm/blob/main/homework/week11/HW10.py)
-[說明](https://github.com/wengziting00/_cm/tree/main/homework/week11)
+https://github.com/ting000977/_cm/blob/main/hw/%E7%AC%AC11%E5%91%A8%E7%BF%92%E9%A1%8C%EF%BC%9A%E8%AB%8B%E5%AF%AB%E5%87%BA%E5%82%85%E7%AB%8B%E8%91%89%E6%AD%A3%E8%BD%89%E6%8F%9B%E5%92%8C%E9%80%86%E8%BD%89%E6%8F%9B%E7%9A%84%E5%87%BD%E6%95%B8%EF%BC%88%E4%B8%8D%E8%A6%81%E7%94%A8%E5%A5%97%E4%BB%B6%EF%BC%89
 [AI](https://gemini.google.com/app/5a46793b4b1d78a6?hl=zh-TW)
 # 離散傅立葉變換 (DFT) 與逆變換 (IDFT) 實現及可逆性驗證
 
@@ -593,8 +589,7 @@ verify_dft_inverse(f_test)
 | 結論 | 誤差極小，驗證成功 |
 
 # 第13周習題：請寫程式求解常係數齊次常微分方程
-[習題11](https://github.com/wengziting00/_cm/blob/main/homework/week13/week13.py)
-[說明](https://github.com/wengziting00/_cm/blob/main/homework/week13/README.md)
+https://github.com/ting000977/_cm/blob/main/hw/%E7%AC%AC13%E5%91%A8%E7%BF%92%E9%A1%8C%EF%BC%9A%E8%AB%8B%E5%AF%AB%E7%A8%8B%E5%BC%8F%E6%B1%82%E8%A7%A3%E5%B8%B8%E4%BF%82%E6%95%B8%E9%BD%8A%E6%AC%A1%E5%B8%B8%E5%BE%AE%E5%88%86%E6%96%B9%E7%A8%8B
 [AI](https://gemini.google.com/app/c5f67c12dd438c99?hl=zh-TW)
 
 根據微分方程理論，這類方程的通解完全由其特徵方程的根所決定，因此程式首先利用 numpy.roots 計算由輸入係數所形成的特徵多項式的所有根。由於數值計算可能產生微小誤差，例如理論上的實根在計算後可能帶有極小的虛部，程式會對根進行修正，將虛部接近零的根視為實根，以確保分類的正確性。
@@ -603,4 +598,4 @@ verify_dft_inverse(f_test)
 
 最後，程式將所有線性獨立解以常數 𝐶𝑖Ci組合成通解，並以字串形式輸出
 
-# 都是由AI生成 後續有在看過一遍並理解
+# AI生成 有盡量去解讀
